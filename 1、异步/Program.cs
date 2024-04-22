@@ -1,9 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
+using System.IO;
 
-namespace NetCoreLearning
+namespace _1_异步
 {
     internal class Program
     {
@@ -17,7 +18,7 @@ namespace NetCoreLearning
         {
             //await DownloadHtmlAsync("https://www.baidu.com",@"e:\1.txt");
             //Console.WriteLine("Hello World!");
-            await Task.Delay(10000); // 模拟耗时操作
+
             Console.WriteLine("Operation completed");
             Console.ReadKey();
         }
@@ -28,17 +29,18 @@ namespace NetCoreLearning
         /// <param name="url"></param>
         /// <param name="filename"></param>
         /// <returns></returns>
-        static async Task DownloadHtmlAsync(string url,string filename)
+        static async Task DownloadHtmlAsync(string url, string filename)
         {
             //HttpClient因为 继承了IDisposable  所以需要回收
-            using (HttpClient httpClient=new HttpClient())
+            using (HttpClient httpClient = new HttpClient())
             {
                 string html = await httpClient.GetStringAsync(url);
-                await File.WriteAllTextAsync(filename,html);
+                await File.WriteAllTextAsync(filename, html);
             }
         }
         /// <summary>
         /// 同步：同步调异步方法
+        /// 问题：这种写法 有死锁的风险
         /// </summary>
         /// <param name="url"></param>
         /// <param name="filename"></param>
@@ -51,6 +53,26 @@ namespace NetCoreLearning
                 File.WriteAllTextAsync(filename, html.Result).Wait();
             }
         }
-
+        /// <summary>
+        /// 异步委托
+        /// </summary>
+        static void Thread()
+        {
+            ///正常使用
+            ThreadPool.QueueUserWorkItem((obj) => {
+                while (true)
+                {
+                    Console.WriteLine("AAAAAAA");
+                }
+            });
+            //使用异步方法
+            ThreadPool.QueueUserWorkItem(async (obj) => {
+                while (true)
+                {
+                    await File.WriteAllTextAsync(@"e:\1.txt", "asdrfasdf");
+                    Console.WriteLine("AAAAAAA");
+                }
+            });
+        }
     }
 }

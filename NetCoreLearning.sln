@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreLearning", "NetCoreLearning.csproj", "{36B06960-554C-40B6-9A3D-D2ABDF5D339A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1、异步", "1、异步\1、异步.csproj", "{3486CA65-6CC0-47F4-AD16-E7A25DEE76BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2、async、await背后的原理", "2、async、await背后的原理\2、async、await背后的原理.csproj", "{2F12D4CA-F33A-4866-A808-B0CF16799456}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{36B06960-554C-40B6-9A3D-D2ABDF5D339A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{36B06960-554C-40B6-9A3D-D2ABDF5D339A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{36B06960-554C-40B6-9A3D-D2ABDF5D339A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{36B06960-554C-40B6-9A3D-D2ABDF5D339A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3486CA65-6CC0-47F4-AD16-E7A25DEE76BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3486CA65-6CC0-47F4-AD16-E7A25DEE76BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3486CA65-6CC0-47F4-AD16-E7A25DEE76BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3486CA65-6CC0-47F4-AD16-E7A25DEE76BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
