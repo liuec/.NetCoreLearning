@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1、异步", "1、异步\1�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2、async、await背后的原理", "2、async、await背后的原理\2、async、await背后的原理.csproj", "{2F12D4CA-F33A-4866-A808-B0CF16799456}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3、线程池和异步", "3、线程池和异步\3、线程池和异步.csproj", "{C37D5A79-2630-462E-B140-AC254FD2A16D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F12D4CA-F33A-4866-A808-B0CF16799456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37D5A79-2630-462E-B140-AC254FD2A16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37D5A79-2630-462E-B140-AC254FD2A16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37D5A79-2630-462E-B140-AC254FD2A16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37D5A79-2630-462E-B140-AC254FD2A16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
