@@ -15,8 +15,11 @@ namespace NetCoreLearning
         /// 无返回值：直接定义Task
         static async Task Main(string[] args)
         {
-            await DownloadHtmlAsync("https://www.baidu.com",@"e:\1.txt");
-            Console.WriteLine("Hello World!");
+            //await DownloadHtmlAsync("https://www.baidu.com",@"e:\1.txt");
+            //Console.WriteLine("Hello World!");
+            await Task.Delay(10000); // 模拟耗时操作
+            Console.WriteLine("Operation completed");
+            Console.ReadKey();
         }
 
         /// <summary>
@@ -45,7 +48,7 @@ namespace NetCoreLearning
             using (HttpClient httpClient = new HttpClient())
             {
                 Task<string> html = httpClient.GetStringAsync(url);
-                File.WriteAllTextAsync(filename, html.Result);
+                File.WriteAllTextAsync(filename, html.Result).Wait();
             }
         }
 
