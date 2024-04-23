@@ -33,3 +33,19 @@ class Program
 <br><br>
 等处理完后，会换新的程序池处理
 ___
+### 1.3 async、await关键字免写
+```
+//async 和 await 是组合关键字，如果方法返回值本身 是Task<T>,可以去掉关键字
+static Task<string> ReaadAsync2(int num)
+{
+    if (num == 1)
+    {
+        return  File.ReadAllTextAsync(@"e:\1.txt");
+    }
+    else
+    {
+        throw new ArgumentException();
+    }
+}
+```
+**这种写法可以避免重复的 拆箱装箱的动作，执行更高效**
