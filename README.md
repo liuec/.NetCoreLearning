@@ -51,3 +51,14 @@ static Task<string> ReaadAsync2(int num)
 **这种写法可以避免重复的 拆箱装箱的动作，执行更高效**
 ### 1.4 CancellationToken取消执行方法
 用户在访问请求，可能还没有等到结果就离开，可以用CancellationToken取消执行
+```
+CancellationTokenSource cts = new CancellationTokenSource();//初始化
+cts.CancelAfter(10000);//设定程序执行10秒后，中断
+```
+方法一：IsCancellationRequested，判断是否中断，可以方便用户操作
+await DownloadAsync("https://www.baidu.com", cts.Token);
+方法二：ThrowIfCancellationRequested()，强制中断，并返回一个Throw错误
+await DownloadAsyncV2("https://www.baidu.com", cts.Token);
+方法三：程序支持CancellationToken中断功能
+await DownloadAsyncV3("https://www.baidu.com", cts.Token);
+总结：显然方法一更好一点
