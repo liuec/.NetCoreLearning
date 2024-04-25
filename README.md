@@ -49,3 +49,5 @@ static Task<string> ReaadAsync2(int num)
 }
 ```
 **这种写法可以避免重复的 拆箱装箱的动作，执行更高效**
+### 1.4 CancellationToken取消执行方法
+用户在访问请求，可能还没有等到结果就离开，可以用CancellationToken取消执行
