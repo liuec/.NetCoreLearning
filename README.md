@@ -50,6 +50,7 @@ static Task<string> ReaadAsync2(int num)
 ```
 **这种写法可以避免重复的 拆箱装箱的动作，执行更高效**
 ### 1.4 CancellationToken取消执行方法
+#### 1.4.1 CancellationToken方法的普通使用
 用户在访问请求，可能还没有等到结果就离开，可以用CancellationToken取消执行
 ```
 CancellationTokenSource cts = new CancellationTokenSource();//初始化
@@ -68,3 +69,12 @@ await DownloadAsyncV2("https://www.baidu.com", cts.Token);
 await DownloadAsyncV3("https://www.baidu.com", cts.Token);
 <br>
 第一、第二种 和第三种方法可以组合使用
+#### 1.4.2在Web中使用CancellationToken方法
+```
+public async Task<IActionResult> Index(CancellationToken cancellationToken)
+{
+    await ConsoleTxt("https://www.youzack.com",100000, cancellationToken);
+    return View();
+}
+```
+用户在离开网页后，会停止运算
