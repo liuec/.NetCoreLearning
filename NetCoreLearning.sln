@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2、async、await背后的�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3、线程池和异步", "3、线程池和异步\3、线程池和异步.csproj", "{C37D5A79-2630-462E-B140-AC254FD2A16D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4、async为什么非必须？", "4、async为什么非必须？\4、async为什么非必须？.csproj", "{988B5758-0711-4D30-B3E4-EA2AA3F0BF41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4、async为什么非必须？", "4、async为什么非必须？\4、async为什么非必须？.csproj", "{988B5758-0711-4D30-B3E4-EA2AA3F0BF41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5、CancellationToken", "4、CancellationToken\5、CancellationToken.csproj", "{F7DAC941-4CF1-4E5E-9CC3-6D2A470C37EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{988B5758-0711-4D30-B3E4-EA2AA3F0BF41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{988B5758-0711-4D30-B3E4-EA2AA3F0BF41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{988B5758-0711-4D30-B3E4-EA2AA3F0BF41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7DAC941-4CF1-4E5E-9CC3-6D2A470C37EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7DAC941-4CF1-4E5E-9CC3-6D2A470C37EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7DAC941-4CF1-4E5E-9CC3-6D2A470C37EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7DAC941-4CF1-4E5E-9CC3-6D2A470C37EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
