@@ -106,3 +106,13 @@ static void Main(string[] args)
     Console.WriteLine("计算结果："+d2(1,2));//执行委托=执行方法
 }
 ```
+#### 2.1.2 泛型委托Action:无参
+```
+    Action action = F1;
+    action();
+```
+#### 2.1.3 泛型委托Func：有参
+```
+    Func<int,int ,int> func = F2;
+    Console.WriteLine("计算结果：" + func(1, 2));
+```
