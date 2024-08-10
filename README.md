@@ -78,3 +78,19 @@ public async Task<IActionResult> Index(CancellationToken cancellationToken)
 }
 ```
 用户在离开网页后，会停止运算
+
+## 2、Linq基础知识
+### 2.1 Linq的演变：委托——>Lambda——>linq
+#### 2.1.1 委托：指向方法，将方法当作变量传递
+```
+static void F1()
+{
+    Console.WriteLine("Hello, World!");
+}
+delegate void D1();
+static void Main(string[] args)
+{
+    D1 d = F1;
+    d();
+}
+```
