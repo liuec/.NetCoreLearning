@@ -87,10 +87,22 @@ static void F1()
 {
     Console.WriteLine("Hello, World!");
 }
-delegate void D1();
+delegate void D1();//定义委托
 static void Main(string[] args)
 {
-    D1 d = F1;
-    d();
+    D1 d = F1;//将委托指向F1方法
+    d();//执行委托=执行方法
+}
+```
+```
+static int F2(int i,int j)
+{
+    return i + j;
+}
+delegate int D2(int i, int j);//定义委托
+static void Main(string[] args)
+{
+    D2 d2 = F2;/将委托指向F2方法
+    Console.WriteLine("计算结果："+d2(1,2));//执行委托=执行方法
 }
 ```
