@@ -78,3 +78,77 @@ public async Task<IActionResult> Index(CancellationToken cancellationToken)
 }
 ```
 用户在离开网页后，会停止运算
+
+## 2、Linq基础知识
+### 2.1 Linq的演变：委托——>Lambda——>linq
+#### 2.1.1 委托：指向方法，将方法当作变量传递
+```
+static void F1()
+{
+    Console.WriteLine("Hello, World!");
+}
+delegate void D1();//定义委托，无参
+static void Main(string[] args)
+{
+    D1 d = F1;//将委托指向F1方法
+    d();//执行委托=执行方法
+}
+```
+```
+static int F2(int i,int j)
+{
+    return i + j;
+}
+delegate int D2(int i, int j);//定义委托，有参
+static void Main(string[] args)
+{
+    D2 d2 = F2;/将委托指向F2方法
+    Console.WriteLine("计算结果："+d2(1,2));//执行委托=执行方法
+}
+```
+#### 2.1.2 泛型委托Action:无返回值，替代delegate void D1()
+```
+    Action action = F1;
+    action();
+```
+#### 2.1.3 泛型委托Func：有返回值，替代delegate int D2(int i, int j)
+```
+    Func<int,int ,int> func = F2;//Func，最后一个参数是返回值类型
+    Console.WriteLine("计算结果：" + func(1, 2));
+```
+#### 2.1.4 匿名委托：将方法直接通过delegate，代替定义方法
+```
+   Action action1 = delegate ()
+   {
+       Console.WriteLine("Hello, 匿名委托!");
+   };
+   action1();
+
+   Action<int, int> action2 = delegate (int n,int i)
+   {
+       Console.WriteLine($"n={n},i={i}");
+   };
+   action2(1,2);
+
+   Func<int, int, int> func1 = delegate (int i, int j)
+   {
+       return i + j;
+   };
+   Console.WriteLine($"i+j的和："+func1(100,10));
+```
+#### 2.1.5 匿名方法：写成lambda表达式
+```
+   //第一步：省略delegate
+   Func<int, int, int> func2 = (int i, int j)=>
+   {
+       return i + j;
+   };
+   Console.WriteLine($"i+j的和：" + func2(100, 11));
+   //第二步：省略值类型
+   Func<int, int, int> func3 = (i,j) =>
+   {
+       return i + j;
+   };
+   //第二步：只有一行 省略括号和Return
+   Func<int, int, int> func3 = (i,j) =>i + j;
+```
