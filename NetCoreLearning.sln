@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4、async为什么非必须
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5、CancellationToken", "5、CancellationToken\5、CancellationToken.csproj", "{A0D85B1B-59B1-498B-9A3A-CF933DE5945D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6、Web使用CancellationToken", "6、Web使用CancellationToken\6、Web使用CancellationToken.csproj", "{32EA7B08-1E53-47B5-92C8-9E86DB61EA5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6、Web使用CancellationToken", "6、Web使用CancellationToken\6、Web使用CancellationToken.csproj", "{32EA7B08-1E53-47B5-92C8-9E86DB61EA5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7、Linq", "7、Linq\7、Linq.csproj", "{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{32EA7B08-1E53-47B5-92C8-9E86DB61EA5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32EA7B08-1E53-47B5-92C8-9E86DB61EA5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32EA7B08-1E53-47B5-92C8-9E86DB61EA5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
