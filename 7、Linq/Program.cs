@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _7_Linq
+namespace _7_从委托到Lamdba
 {
     class Program
     {

@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5、CancellationToken", "5�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6、Web使用CancellationToken", "6、Web使用CancellationToken\6、Web使用CancellationToken.csproj", "{32EA7B08-1E53-47B5-92C8-9E86DB61EA5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7、Linq", "7、Linq\7、Linq.csproj", "{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7、从委托到Lamdba", "7、Linq\7、从委托到Lamdba.csproj", "{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8、Linq", "8、Linq\8、Linq.csproj", "{A0AAA25B-4DE6-430F-9101-67CF07BDE485}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA26B4F4-F96E-487B-A78E-D5A28E977F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AAA25B-4DE6-430F-9101-67CF07BDE485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AAA25B-4DE6-430F-9101-67CF07BDE485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AAA25B-4DE6-430F-9101-67CF07BDE485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AAA25B-4DE6-430F-9101-67CF07BDE485}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
